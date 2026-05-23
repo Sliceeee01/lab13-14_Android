@@ -1,5 +1,6 @@
 package com.example.unscramblegame.ui_model
 
+
 import androidx.lifecycle.ViewModel
 import com.example.unscramblegame.data.GameUiState
 import com.example.unscramblegame.data.allWords
@@ -32,7 +33,6 @@ class GameViewModel : ViewModel() {
         while (usedWords.contains(currentWord)) {
             currentWord = allWords.random()
         }
-
         usedWords.add(currentWord)
         return shuffleCurrentWord(currentWord)
     }
